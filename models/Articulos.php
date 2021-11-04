@@ -1,7 +1,7 @@
 <?php
     class Articulos extends Conectar{
-
-        public function get_articulos(){
+        //Obtener todos los Articulos
+        public function get_articulos(){ 
             $conectar= parent::conexion();
             parent::set_names();
             $sql="SELECT * FROM ma_articulos ";
@@ -9,8 +9,8 @@
             $sql->execute();
             return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
         }
-        
-        public function get_articulo($id){
+        //Obtener un Articulo
+        public function get_articulo($id){ 
             $conectar=parent::conexion();
             parent::set_names();
             $sql="SELECT * FROM ma_articulos WHERE  id = ?";
@@ -19,7 +19,7 @@
             $sql->execute();
             return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
         }
-
+        //Insertar Articulos
         public function insert_articulos($descripcion,$unidad,$costo,$precio,$aplica_isv,$porcentaje_isv,$id_socio){
             $conectar= parent::conexion();
             parent::set_names();
@@ -36,7 +36,7 @@
             $sql->execute();
             return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
         }
-        
+        //Eliminar Articulos
         public function delete_articulos($id){
             $conectar=parent::conexion();
             parent::set_names();
@@ -47,7 +47,7 @@
             return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
         }
 
-
+        //Actualizar Articulos
         public function update_articulos($id,$descripcion,$unidad,$costo,$precio,$aplica_isv,$porcentaje_isv,$estado,$id_socio){
             $conectar= parent::conexion();
             parent::set_names();

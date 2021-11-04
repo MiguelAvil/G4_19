@@ -8,7 +8,7 @@
     $body = json_decode(file_get_contents("php://input"), true);
 
     switch ($_GET["op"]){
-        case "GetArticulos":
+        case "GetArticulos": 
             $datos=$articulos->get_articulos();
             echo json_encode($datos);
         break;
