@@ -31,7 +31,7 @@
 
         case "InsertArticulos":
             $datos=$articulos->insert_articulos($body["descripcion"],$body["unidad"],$body["costo"],
-            $body["precio"],$body["aplica_isv"],$body["porcentaje_isv"],$body["id_socio"]);
+            $body["precio"],$body["aplica_isv"],$body["porcentaje_isv"],$body["estado"],$body["id_socio"]);
             echo json_encode("Articulo Agregado");
         break;
 
