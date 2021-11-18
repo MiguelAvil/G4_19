@@ -20,7 +20,7 @@
             return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
         }
         //Insertar Articulos
-        public function insert_articulos($descripcion,$unidad,$costo,$precio,$aplica_isv,$porcentaje_isv,$id_socio){
+        public function insert_articulos($descripcion,$unidad,$costo,$precio,$aplica_isv,$porcentaje_isv,$estado,$id_socio){
             $conectar= parent::conexion();
             parent::set_names();
             $sql="INSERT INTO ma_articulos(id,descripcion,unidad,costo,precio,aplica_isv,porcentaje_isv,estado,id_socio )
